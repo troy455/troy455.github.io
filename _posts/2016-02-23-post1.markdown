@@ -6,5 +6,5 @@ categories: jekyll update
 ---
 
 {% highlight ruby %}
-this is a space for code.
+this is a space for code. also other things if you want
 {% endhighlight %}
