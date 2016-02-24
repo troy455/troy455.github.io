@@ -1,131 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-<head>
+<div class="home">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal Bio">
-    <meta name="author" content="Patrick Golden">
+  <h1 class="page-heading">Posts</h1>
 
-    <title>Patrick Golden</title>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-    <!-- Custom CSS -->
-    <link href="css/one-page-wonder.css" rel="stylesheet">
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#music">Music</a>
-                    </li>
-                    <li>
-                        <a href="#moments">Moments</a>
-                    </li>
-                    <li>
-                        <a href="#passion">Passion</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Full Width Image Header -->
-    <header class="header-image">
-        <div class="headline">
-            <div class="container">
-                <h1>Patrick Golden</h1>
-                <h2>Agem Vitam Baetam</h2>
-            </div>
-        </div>
-    </header>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <hr class="featurette-divider" id="music">
-
-        <!-- First Featurette -->
-        <div class="featurette">
-            <img class="featurette-image img-circle img-responsive pull-right" src="/images/Music500x500.jpg">
-            <h2 class="featurette-heading">Music
-                <span class="text-muted">That Moves You</span>
-            </h2>
-            <p class="lead">The meaning is as important as the feeling.You can dance but the song must make you think.<br><br> Everyone needs to do their part in leaving something positive behind for the next generation.</p>
-        </div>
-
-        <hr class="featurette-divider" id="moments">
-
-        <!-- Second Featurette -->
-        <div class="featurette">
-            <img class="featurette-image img-circle img-responsive pull-left" src="/images/Moments500x500.jpg">
-            <h2 class="featurette-heading">A Moment
-                <span class="text-muted">That Inspires You</span>
-            </h2>
-            <p class="lead">May the next adventure lead you to your great discovery. Every day in this world was a gift to us.<br><br> By accepting this true fact, anyone can find greatness and peace within themselves. It is our destiny to cherish our environment.<br><br> Whether looking over the horizon of a great city, or a great canyon; appreciate the moment. </p>
-        </div>
-
-        <hr class="featurette-divider" id="passion">
-
-        <!-- Third Featurette -->
-        <div class="featurette">
-            <img class="featurette-image img-circle img-responsive pull-right" src="/images/Passion500x500.jpg">
-            <h2 class="featurette-heading">Passion
-                <span class="text-muted">That Helps You Thrive</span>
-            </h2>
-            <p class="lead">Be proud of who you are and what you do. A great leader has the confidence; not always the ability to achieve.<br><br> By putting trust in yourself, you can achieve anything. Greatness is only as far of a reach as you make it to be.<br><br> Learn, Live, Love, Laugh; this is the meaning of LYFE.</p>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Patrick Golden 2015</p>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-    <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
-</html>
+</div>
